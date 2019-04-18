@@ -298,3 +298,4 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 bin
+/.vs/db1/v16/*.suo
