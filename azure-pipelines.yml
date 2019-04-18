@@ -27,6 +27,12 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: SqlDacpacDeploymentOnMachineGroup@0
+  inputs:
+    TaskType: 'dacpac'
+    DacpacFile: 'db1.dacpac'
+    DatabaseName: 'db1'
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
