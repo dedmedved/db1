@@ -59,5 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Table1.sql" />
+    <Build Include="Procedure1.sql" />
   </ItemGroup>
 </Project>
