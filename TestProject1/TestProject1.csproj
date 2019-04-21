@@ -9,11 +9,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{98FBE0CE-ED19-4A3C-8CFD-5CFE84859E0A}</ProjectGuid>
+    <ProjectGuid>{C02661C5-103F-4884-BD0C-7E6AC531B7D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>db1_UnitTests</RootNamespace>
-    <AssemblyName>db1_UnitTests</AssemblyName>
+    <RootNamespace>TestProject1</RootNamespace>
+    <AssemblyName>TestProject1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -58,11 +58,19 @@
   </Choose>
   <ItemGroup>
     <Compile Include="SqlDatabaseSetup.cs" />
+    <Compile Include="SqlServerUnitTest1.cs">
+      <SubType>Designer</SubType>
+    </Compile>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SqlServerUnitTest1.resx">
+      <DependentUpon>SqlServerUnitTest1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup Condition="$(VisualStudioVersion) == '15.0'">
@@ -70,11 +78,11 @@
       <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTesting, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTesting, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll</HintPath>
       <Private>True</Private>
     </Reference>
